@@ -3,8 +3,7 @@
 <h2>Overview</h2>
 
 For this assignment I had to write a server ("Application") in Java that opens a socket and restricts input to at most 5 concurrent clients.
-Clients are then able to connect to the application and write any number of 9 digit numbers, and then close the connection.  
-The application is then able write a de-duplicated list of the numbers to a log file.
+Clients are then able to connect to the application and write any number of 9 digit numbers, and then close the connection.  The application is then able write a de-duplicated list of the numbers to a log file.
 
 <h2>Approach</h2>
 
@@ -24,7 +23,7 @@ This is the criteria for valid input:
 
 *  Input is not negative
 
-There is also an `InputQueue` class.  This class keeps track of the inputs from the different clients and counts any duplicate values.  A boolean array was chosen for this purpose.  Some options that were considered for duplicate tracking were a Set, Boolean array, and a BitSet.  
+There is also an `InputQueue` class.  This class keeps track of the inputs from the different clients and counts any duplicate values.  A boolean array was chosen for this purpose.  Some options that were considered for duplicate tracking were a Set, boolean array, and a BitSet.  
 
 Sets are slow in comparison to boolean arrays and BitSets, so that option was dismissed early.  [This article](https://www.baeldung.com/java-boolean-array-bitset-performance) shows that in single-bit write-heavy scenarios, the boolean array exhibits a superior throughput almost all the time except for a very large number of bits.  So the 
 boolean array was chosen.
@@ -82,7 +81,7 @@ specified requirements.
 :heavy_check_mark: Clearly state all of the assumptions you made in completing the Application along with any instructions on how to set up and run it in a README file.
 
 <h2>To Run</h2>
-Running is quite easy.  Just clone the repo and run `main()` in the `Main` class.
+Running is quite easy.  Just clone the repo and run the main method in the Main class.
 
 To test, just run the desired tests.  Be sure that the Server is running while testing.
 
