@@ -26,7 +26,7 @@ This is the criteria for valid input:
 
 There is also an `InputQueue` class.  This class keeps track of the inputs from the different clients and counts any duplicate values.  A boolean array was chosen for this purpose.  Some options that were considered for duplicate tracking were a Set, Boolean array, and a BitSet.  
 
-Sets are slow in comparison to boolean arrays and BitSets, so that option was dismissed early.  ![This article](https://www.baeldung.com/java-boolean-array-bitset-performance) shows that in single-bit write-heavy scenarios, the boolean array exhibits a superior throughput almost all the time except for a very large number of bits.  So the 
+Sets are slow in comparison to boolean arrays and BitSets, so that option was dismissed early.  [This article](https://www.baeldung.com/java-boolean-array-bitset-performance) shows that in single-bit write-heavy scenarios, the boolean array exhibits a superior throughput almost all the time except for a very large number of bits.  So the 
 boolean array was chosen.
 
 The InputQueue class also utilizes `java.util.Timer` and `java.util.TimerTask` to print a report to standard output every ten seconds.  
@@ -88,13 +88,13 @@ To test, just run the desired tests.  Be sure that the Server is running while t
 
 <h2>References</h2>
 
-*  ![A Guide to Java Sockets](https://www.baeldung.com/a-guide-to-java-sockets)
+*  [A Guide to Java Sockets](https://www.baeldung.com/a-guide-to-java-sockets)
 
-*  ![Socket Programming in Java](https://www.infoworld.com/article/2853780/socket-programming-for-scalable-systems.html)
+*  [Socket Programming in Java](https://www.infoworld.com/article/2853780/socket-programming-for-scalable-systems.html)
 
-*  ![Writing the Server Side of a Socket](https://docs.oracle.com/javase/tutorial/networking/sockets/clientServer.html)
+*  [Writing the Server Side of a Socket](https://docs.oracle.com/javase/tutorial/networking/sockets/clientServer.html)
 
-*  ![Performance Comparison of boolean Array vs BitSet](https://www.baeldung.com/java-boolean-array-bitset-performance)
+*  [Performance Comparison of boolean Array vs BitSet](https://www.baeldung.com/java-boolean-array-bitset-performance)
 
 <h2>Complete Challenge Description</h2>
 
