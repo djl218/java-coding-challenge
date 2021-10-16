@@ -84,14 +84,14 @@ public class Server {
         private boolean isValidInput(String input)
                 throws NumberFormatException {
             if (input.length() != 9) {
-                throw new NumberFormatException("Input " + input + " was not exactly nine digits long");
+                throw new NumberFormatException("Input " + input + " is not exactly nine digits long");
             }
             for (int i = 0; i < 9; i++) {
                 if (i == 0 && input.charAt(i) == '-') {
-                    throw new NumberFormatException("Input " + input + " contained negative sign as first character");
+                    throw new NumberFormatException("Input " + input + " contains negative sign as first character");
                 }
                 if (!Character.isDigit(input.charAt(i))) {
-                    throw new NumberFormatException("Input " + input + " did not contain only decimal digits");
+                    throw new NumberFormatException("Input " + input + " does not contain only decimal digits");
                 }
             }
             return true;

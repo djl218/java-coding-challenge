@@ -1,6 +1,6 @@
-package test.java.com.newrelic.codingchallenge;
+package com.newrelic.codingchallenge;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class MainTest {
     private static final String LOCAL_HOST = "127.0.0.1";
@@ -31,6 +31,14 @@ public class MainTest {
     }
 
     @Test
+    public void testDuplicates() {
+        Client client = new Client();
+        client.connect(LOCAL_HOST, PORT);
+        client.sendInput("000000000");
+        client.sendInput("000000000");
+    }
+
+    @Test
     public void handleFiveClients() {
         Client client1 = new Client();
         Client client2 = new Client();
@@ -45,7 +53,7 @@ public class MainTest {
         client5.connect(LOCAL_HOST, PORT);
 
         int min = 0, max = 999_999_999;
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 400_000; i++) {
             int rand1 = (int) (Math.random() * (max - min) + min);
             int rand2 = (int) (Math.random() * (max - min) + min);
             int rand3 = (int) (Math.random() * (max - min) + min);

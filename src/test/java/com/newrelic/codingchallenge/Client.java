@@ -1,4 +1,4 @@
-package test.java.com.newrelic.codingchallenge;
+package com.newrelic.codingchallenge;
 
 import java.io.InputStreamReader;
 import java.net.Socket;
