@@ -17,6 +17,14 @@ public class MainTest {
     }
 
     @Test
+    public void testNonNineDigitNumber() {
+        Client client = new Client();
+        client.connect(LOCAL_HOST, PORT);
+        client.sendInput("000000000");
+        client.sendInput("11111111");
+    }
+
+    @Test
     public void testNegativeNumber() {
         Client client = new Client();
         client.connect(LOCAL_HOST, PORT);
