@@ -5,6 +5,8 @@ import org.junit.Test;
 public class MainTest {
     private static final String LOCAL_HOST = "127.0.0.1";
     private static final int PORT = 4000;
+    private static final int MAX_INPUT_VALUE = 999_999_999;
+    private static final int TOTAL_INPUT_FOR_TEN_SECOND_REPORTING_PERIOD = 2_000_000;
 
     @Test
     public void testTermination() {
@@ -52,8 +54,8 @@ public class MainTest {
         client4.connect(LOCAL_HOST, PORT);
         client5.connect(LOCAL_HOST, PORT);
 
-        int min = 0, max = 999_999_999;
-        for (int i = 0; i <= 400_000; i++) {
+        int min = 0, max = MAX_INPUT_VALUE;
+        for (int i = 0; i <= TOTAL_INPUT_FOR_TEN_SECOND_REPORTING_PERIOD / 5; i++) {
             int rand1 = (int) (Math.random() * (max - min) + min);
             int rand2 = (int) (Math.random() * (max - min) + min);
             int rand3 = (int) (Math.random() * (max - min) + min);
