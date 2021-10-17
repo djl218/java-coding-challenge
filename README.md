@@ -12,7 +12,7 @@ The BlockingQueue is used because there will be concurrent clients using the app
 and appropriate for use cases involving concurrency.  The instance of the BlockingQueue will be passed as argument to another class that was 
 created for this project: `InputQueue`.
 
-The Server has a `ClientHandler` class that runs until a client chooses to disconnect from the server by entering "terminate" as input.  When this inputted by the client, the server will shut down.  The ClientHandler takes valid inputs from the clients and sends that information to 
+The Server has a `ClientHandler` class that runs until a client chooses to disconnect from the server by entering "terminate" as input.  When this input is entered by the client, the server will shut down.  The ClientHandler takes valid inputs from the clients and sends that information to 
 the BlockingQueue.
 
 This is the criteria for valid input:
@@ -43,6 +43,8 @@ That report includes the following information:
 Finally there is a `Client` class.  This class was created in order to perform tests on the Server.
 
 <h2>Tests</h2>
+
+*  Only numbers that are nine decimal digits in length will be added to the InputQueue
 
 *  Server shuts down when a client inputs "terminate"
 
