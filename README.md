@@ -130,13 +130,13 @@ Write a server (“Application”) in Java that opens a socket and restricts inp
 
 *  Every 10 seconds, the Application must print a report to standard output:
 
-  *  The difference since the last report of the count of new unique numbers that have been received.
+    -  The difference since the last report of the count of new unique numbers that have been received.
   
-  *  The difference since the last report of the count of new duplicate numbers that have been received.
+    -  The difference since the last report of the count of new duplicate numbers that have been received.
   
-  *  The total number of unique numbers received for this run of the Application.
+    -  The total number of unique numbers received for this run of the Application.
   
-  *  Example text for report: Received 50 unique numbers, 2 duplicates. Unique total: 567231
+    -  Example text for report: Received 50 unique numbers, 2 duplicates. Unique total: 567231
   
 *  If any connected client writes a single line with only the word "terminate" followed by a server-native newline sequence, the Application must disconnect all clients and perform a clean shutdown as quickly as possible.
 
