@@ -53,7 +53,7 @@ public class MainTest {
         client5.connect(LOCAL_HOST, PORT);
 
         int min = 0, max = 999_999_999;
-        for (int i = 0; i < 400_000; i++) {
+        for (int i = 0; i <= 400_000; i++) {
             int rand1 = (int) (Math.random() * (max - min) + min);
             int rand2 = (int) (Math.random() * (max - min) + min);
             int rand3 = (int) (Math.random() * (max - min) + min);
