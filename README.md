@@ -8,7 +8,7 @@ Clients are then able to connect to the application and write any number of 9 di
 <h2>Approach</h2>
 
 A `Server` class is created that utilizes the `java.net.ServerSocket` class and the `java.util.concurrent.BlockingQueue` interface.  The ServerSocket is used, so that the server can connect to a specific port.  In this case, the server will be connecting to port 4000.
-The BlockingQueue is used because there will be concurrent clients using the application.  The BlockingQueueServer is thread safe
+The BlockingQueue is used because there will be concurrent clients using the application.  The BlockingQueue is thread safe
 and appropriate for use cases involving concurrency.  The instance of the BlockingQueue will be passed as argument to another class that was 
 created for this project: `InputQueue`.
 
@@ -38,7 +38,7 @@ That report includes the following information:
 
 *  The total number of unique numbers received for this run of the Application.
 
-*  Example text for #8: Received 50 unique numbers, 2 duplicates. Unique total: 567231
+*  Sample report: Received 50 unique numbers, 2 duplicates. Unique total: 567231
 
 Finally there is a `Client` class.  This class was created in order to perform tests on the Server.
 
@@ -46,7 +46,7 @@ Finally there is a `Client` class.  This class was created in order to perform t
 
 *  Only numbers that are nine decimal digits in length will be added to the InputQueue
 
-*  Server shuts down when a client inputs "terminate"
+*  Server shuts down when a client enters "terminate" as input
 
 *  Negative numbers will not be added as input to the InputQueue
 
@@ -54,17 +54,16 @@ Finally there is a `Client` class.  This class was created in order to perform t
 
 *  Duplicate values will not be added to the InputQueue, but a count of duplicate values will be kept and updated
 
-*  Five concurrent clients will be able to use the server concurrently and be able to submit 2M numbers
+*  Five clients will be able to use the server concurrently and be able to submit 2M numbers
 
-All tests were passed.  Although it was specified that the server should be able to handle more than 2M numbers per 10-second reporting period.
-The laptop used for this testing is quite old and took about 40 seconds.  If tested on a more modern laptop, it might have been able to meet the 
+All tests were passed.  Although it was specified that the server should be able to handle more than 2M numbers per 10-second reporting period, the laptop used for this testing is about ten years old and took about 40 seconds.  If tested on a more modern laptop, it might have been able to meet the 
 specified requirements.
 
 <h2>Fulfilled Requirements</h2>
 
 :heavy_check_mark: The Application must accept input from at most 5 concurrent clients on TCP/IP port 4000.
 
-:heavy_check_mark: Input lines presented to the Application via its socket must either be composed of exactly nine decimal digits (e.g.: 314159265 or 007007009) immediately followed by a server-native newline sequence; or a termination sequence as detailed in #9, below.
+:heavy_check_mark: Input lines presented to the Application via its socket must either be composed of exactly nine decimal digits (e.g.: 314159265 or 007007009) immediately followed by a server-native newline sequence; or a termination sequence.
 
 :heavy_check_mark: Numbers presented to the Application must include leading zeros as necessary to ensure they are each 9 decimal digits.
 
@@ -117,7 +116,7 @@ Write a server (“Application”) in Java that opens a socket and restricts inp
 
 *  The Application must accept input from at most 5 concurrent clients on TCP/IP port 4000.
 
-*  Input lines presented to the Application via its socket must either be composed of exactly nine decimal digits (e.g.: 314159265 or 007007009) immediately followed by a server-native newline sequence; or a termination sequence as detailed in #9, below.
+*  Input lines presented to the Application via its socket must either be composed of exactly nine decimal digits (e.g.: 314159265 or 007007009) immediately followed by a server-native newline sequence; or a termination sequence.
 
 *  Numbers presented to the Application must include leading zeros as necessary to ensure they are each 9 decimal digits.
 
@@ -137,7 +136,7 @@ Write a server (“Application”) in Java that opens a socket and restricts inp
   
   *  The total number of unique numbers received for this run of the Application.
   
-  *  Example text for #8: Received 50 unique numbers, 2 duplicates. Unique total: 567231
+  *  Example text for report: Received 50 unique numbers, 2 duplicates. Unique total: 567231
   
 *  If any connected client writes a single line with only the word "terminate" followed by a server-native newline sequence, the Application must disconnect all clients and perform a clean shutdown as quickly as possible.
 
