@@ -1,4 +1,4 @@
-<h1>Take-Home Assignment: New Relic</h1>
+<h1>Take-Home Assignment: Java Server</h1>
 
 <h2>Overview</h2>
 
