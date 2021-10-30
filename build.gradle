@@ -27,13 +27,13 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-mainClassName = 'com.newrelic.codingchallenge.Main'
+mainClassName = 'com.codingchallenge.Main'
 
 shadowJar {
     baseName = 'coding-challenge-shadow'
     classifier = null
     version = null
     manifest {
-        attributes 'Description': 'New Relic coding challenge application JAR'
+        attributes 'Description': 'Coding challenge application JAR'
     }
 }
