@@ -1,4 +1,4 @@
-package com.newrelic.codingchallenge;
+package com.codingchallenge;
 
 import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
